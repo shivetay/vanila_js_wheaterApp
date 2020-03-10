@@ -20,14 +20,24 @@
       <div class="header">
         <h1>Wheater app</h1>
       </div>
-      <section class="wheater">
+      <div class="controls">
         <div>
           <h3>Get your whetare for:</h3>
-          <input type="text" />
+          <input id="cityInput" type="text" />
         </div>
-        <button id='getWheater'>Get wheater</button>
+        <button id="getWheater">Get wheater</button>
+      </div>
+      <section id="wheaterSection" class="wheater">
         <div>
-          display result
+          <div>Wheater for miasto</div>
+          <div>
+            <p>temp:</p>
+            <p>preasure</p>
+            <p>humidity</p>
+          </div>
+          <div>
+            <p>icon</p>
+          </div>
         </div>
       </section>
       <section class="wheterMulti">
