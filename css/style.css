@@ -1,0 +1,23 @@
+@import url("https://fonts.googleapis.com/css?family=Roboto:400,700&display=swap");
+/* Variables */
+/* Global */
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+  /*1rem = 10px 10px/16px=62.5 */
+}
+
+.container {
+  height: 100vh;
+}
+/*# sourceMappingURL=style.css.map */
