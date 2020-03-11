@@ -3,12 +3,14 @@
 /* Variables */
 
 $color-main: #2a2f3b;
-$color-scondary: #7b798e;
+$color-scondary: #a2a0b4;
 $color-light: #edecde;
 $color-accent: #a03b33;
 $color-accent-light: #d1944a;
 
 $font-main: 'Roboto', sans-serif;
+
+$font-normal: 1.6rem;
 
 /* Global */
 *,
@@ -20,12 +22,62 @@ $font-main: 'Roboto', sans-serif;
 
 body {
   box-sizing: border-box;
+  background-color: $color-main;
+  color: $color-light;
 }
 
 html {
   font-size: 62.5%; /*1rem = 10px 10px/16px=62.5 */
 }
 
+a {
+  text-decoration: none;
+  font-size: $font-normal;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1.2px;
+}
+a,
+a:active,
+a:focus,
+a:link {
+  color: $color-light;
+}
+
+ul {
+  list-style: none;
+}
+
 .container {
   height: 100vh;
+}
+
+/* navigation */
+
+.navigation {
+  height: 5rem;
+  width: 100%;
+  background-color: $color-scondary;
+  position: static;
+  display: flex;
+
+  ul {
+    flex-direction: row;
+    display: flex;
+    margin: 1.5rem auto;
+    li {
+      order: row;
+    }
+  }
+
+  &__link {
+    padding: 1rem;
+    transition: all 0.4s;
+    border-bottom: none;
+  }
+
+  li:hover &__link {
+    color: $color-accent;
+    border-bottom: 2px solid $color-accent-light;
+  }
 }
