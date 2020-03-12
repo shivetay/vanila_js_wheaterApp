@@ -33,7 +33,7 @@
 
     searchButton.addEventListener('click', function() {
       const city = cityInput.value;
-      fetchCity(apiKey, city);
+      // fetchCity(apiKey, city);
     });
   };
 

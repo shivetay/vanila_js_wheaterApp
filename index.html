@@ -16,14 +16,17 @@
         </ul>
       </nav>
       <div class="header">
-        <h1>Wheater app</h1>
-      </div>
-      <div class="controls">
-        <div>
-          <h3>Get your whetare for:</h3>
-          <input id="cityInput" type="text" />
+        <div class="header__title">
+          <h1>Wheater app</h1>
         </div>
-        <button id="getWheater">Get wheater</button>
+        <div class="header__controls">
+          <!-- <h3>Get your whetare for:</h3> -->
+          <input id="cityInput" type="text" />
+          <label for="cityInput">Check wheater for:</label>
+        </div>
+        <div class="header__button">
+          <button class="btn" id="getWheater">Get wheater</button>
+        </div>
       </div>
       <!-- end controls -->
       <section id="wheaterSection" class="wheater">
