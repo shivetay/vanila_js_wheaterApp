@@ -150,4 +150,11 @@ li:hover .navigation__link {
 }
 
 /* Footer */
+.footer {
+  position: absolute;
+  bottom: 0;
+  background-color: #a2a0b4;
+  height: 5rem;
+  width: 100%;
+}
 /*# sourceMappingURL=style.css.map */

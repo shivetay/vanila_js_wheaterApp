@@ -147,3 +147,10 @@ input:focus + label {
 }
 
 /* Footer */
+.footer {
+  position: absolute;
+  bottom: 0;
+  background-color: $color-scondary;
+  height: 5rem;
+  width: 100%;
+}
