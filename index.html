@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Wheater Js app</title>
+    <title>Weather Js app</title>
     <link rel="stylesheet" type="text/css" href="./css/style.css" />
   </head>
   <body>
@@ -11,36 +11,26 @@
       <nav class="navigation">
         <ul>
           <li><a class="navigation__link" href="#">Home</a></li>
-          <li><a class="navigation__link" href="#">Wheater Map</a></li>
+          <li><a class="navigation__link" href="#">Weather Map</a></li>
           <li><a class="navigation__link" href="#">About</a></li>
         </ul>
       </nav>
       <div class="header">
         <div class="header__title">
-          <h1>Wheater app</h1>
+          <h1>Weather app</h1>
         </div>
         <div class="header__controls">
           <!-- <h3>Get your whetare for:</h3> -->
           <input id="cityInput" type="text" />
-          <label for="cityInput">Check wheater for:</label>
+          <label for="cityInput">Check weather for:</label>
         </div>
         <div class="header__button">
-          <button class="btn" id="getWheater">Get wheater</button>
+          <button class="btn" id="getWheater">Get weather</button>
         </div>
       </div>
       <!-- end controls -->
       <section id="wheaterSection" class="wheater">
-        <div>
-          <div>Wheater for miasto</div>
-          <div>
-            <p>temp:</p>
-            <p>preasure</p>
-            <p>humidity</p>
-          </div>
-          <div>
-            <p>icon</p>
-          </div>
-        </div>
+        <div class="wheater__icons"></div>
       </section>
       <!-- end single whetaer city -->
       <section class="wheterMulti">

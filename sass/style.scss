@@ -11,6 +11,7 @@ $color-accent-light: #d1944a;
 $font-main: 'Roboto', sans-serif;
 
 $font-normal: 1.6rem;
+$font-large: 2.2rem;
 $font-big: 2.8rem;
 
 /* Global */
@@ -34,6 +35,12 @@ html {
 
 h1 {
   font-size: $font-big;
+}
+h3 {
+  font-size: $font-large;
+}
+h1,
+h3 {
   font-weight: 700;
 }
 
@@ -142,6 +149,33 @@ input:focus + label {
   &__controls {
     label {
       order: -1;
+    }
+  }
+}
+
+/* Wheater */
+.wheater {
+  font-size: $font-normal;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  text-align: center;
+  margin-top: 2rem;
+  &__header {
+    flex: 100%;
+  }
+  &__display {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    flex: 100%;
+    margin: 2rem;
+    &-details,
+    &-icon {
+      padding: 1rem;
+    }
+    &-icon {
+      // flex: 50%;
     }
   }
 }

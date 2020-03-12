@@ -21,19 +21,41 @@
     const renderElements = data => {
       const createDiv = document.createElement('div');
       createDiv.innerHTML = `
-      <div>
-        <div>Wheater for ${data.name} </div>
-        <div>
-          
+      <div class="wheater__header">
+          <h3>Weather for ${data.name}</h3>
         </div>
-
-      </div>`;
+        <div class="wheater__display">
+          <div class="wheater__display-details">
+            <p>temp: 36</p>
+            <p>preasure: 1000hpa</p>
+            <p>humidity: 50%</p>
+          </div>
+          <div class="wheater__display-icon">
+            <span>
+            <img src="http://openweathermap.org/img/wn/${
+              getIcon(data.weather).newIcon
+            }.png" alt="weather_icon">
+            </span>
+            <p>${getIcon(data.weather).newDescription}</p>
+          </div>
+        </div>`;
       resultDisplay.appendChild(createDiv);
+    };
+
+    const getIcon = iconData => {
+      let newIcon;
+      let newDescription;
+      for (let weather of iconData) {
+        newIcon = weather.icon;
+        newDescription = weather.description;
+      }
+      return { newIcon, newDescription };
     };
 
     searchButton.addEventListener('click', function() {
       const city = cityInput.value;
-      // fetchCity(apiKey, city);
+      fetchCity(apiKey, city);
+      cityInput.value = '';
     });
   };
 
