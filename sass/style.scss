@@ -76,6 +76,12 @@ input:focus + label {
   transform: translateX(-6px) scale(1.2);
   margin-right: 1.4rem;
 }
+i {
+  width: 5rem;
+  height: 5rem;
+  font-size: 6rem;
+  padding: 1rem;
+}
 
 .container {
   height: 100vh;
