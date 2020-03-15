@@ -80,7 +80,7 @@ i {
   width: 5rem;
   height: 5rem;
   font-size: 6rem;
-  padding: 1rem;
+  padding: 1rem 2rem;
 }
 
 .container {
@@ -104,6 +104,10 @@ i {
 }
 .btn:active {
   transform: translateY(5px);
+}
+.hide {
+  display: none !important;
+  transition: all 0.3s;
 }
 
 /* navigation */
@@ -166,7 +170,9 @@ i {
   flex-wrap: wrap;
   justify-content: center;
   text-align: center;
-  margin-top: 2rem;
+  margin: 2rem 0;
+  transition: all 0.3s;
+
   &__header {
     flex: 100%;
   }
@@ -176,13 +182,16 @@ i {
     text-align: center;
     flex: 100%;
     margin: 2rem;
+    transition: all 0.3s;
     &-details,
     &-icon {
       padding: 1rem;
     }
-    &-icon {
-      // flex: 50%;
-    }
+  }
+  &__icons {
+    display: flex;
+    justify-content: center;
+    transition: all 0.3s;
   }
 }
 

@@ -7,6 +7,8 @@
     const searchButton = document.getElementById('getWheater');
     const cityInput = document.getElementById('cityInput');
     const resultDisplay = document.getElementById('wheaterSection');
+    const iconsConatiner = document.querySelector('.wheater__icons');
+    const createDiv = document.createElement('div');
 
     const fetchCity = (key, cityName) => {
       fetch(
@@ -19,16 +21,15 @@
     };
 
     const renderElements = data => {
-      const createDiv = document.createElement('div');
       createDiv.innerHTML = `
       <div class="wheater__header">
           <h3>Weather for ${data.name}</h3>
         </div>
         <div class="wheater__display">
           <div class="wheater__display-details">
-            <p>temp: 36</p>
-            <p>preasure: 1000hpa</p>
-            <p>humidity: 50%</p>
+            <p>Temperature: ${data.main.temp} C</p>
+            <p>Pressure: ${data.main.pressure} hPa</p>
+            <p>Humidity: ${data.main.humidity}%</p>
           </div>
           <div class="wheater__display-icon">
             <span>
@@ -40,6 +41,8 @@
           </div>
         </div>`;
       resultDisplay.appendChild(createDiv);
+      iconsConatiner.classList.add('hide');
+      setTimeout(clearDiv, 10000);
     };
 
     const getIcon = iconData => {
@@ -57,6 +60,24 @@
       fetchCity(apiKey, city);
       cityInput.value = '';
     });
+
+    const clearDiv = () => {
+      createDiv.innerHTML = '';
+      iconsConatiner.classList.remove('hide');
+    };
+
+    // const activeIcon = () => {
+    //   setTimeout(function() {
+    //     window.requestAnimationFrame(activeIcon);
+    //     for (let icon of iconsLoader) {
+    //       if (!icon.classList.contains('active-icon')) {
+    //         icon.classList.add('active-icon');
+    //       } else {
+    //         icon.classList.remove('active-icon');
+    //       }
+    //     }
+    //   }, 5000);
+    // };
   };
 
   appInit();

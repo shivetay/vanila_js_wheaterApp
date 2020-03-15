@@ -74,7 +74,7 @@ i {
   width: 5rem;
   height: 5rem;
   font-size: 6rem;
-  padding: 1rem;
+  padding: 1rem 2rem;
 }
 
 .container {
@@ -100,6 +100,11 @@ i {
 
 .btn:active {
   transform: translateY(5px);
+}
+
+.hide {
+  display: none !important;
+  transition: all 0.3s;
 }
 
 /* navigation */
@@ -174,7 +179,8 @@ li:hover .navigation__link {
   -ms-flex-pack: center;
       justify-content: center;
   text-align: center;
-  margin-top: 2rem;
+  margin: 2rem 0;
+  transition: all 0.3s;
 }
 
 .wheater__header {
@@ -191,10 +197,19 @@ li:hover .navigation__link {
   -ms-flex: 100%;
       flex: 100%;
   margin: 2rem;
+  transition: all 0.3s;
 }
 
 .wheater__display-details, .wheater__display-icon {
   padding: 1rem;
+}
+
+.wheater__icons {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: center;
+      justify-content: center;
+  transition: all 0.3s;
 }
 
 /* Footer */
