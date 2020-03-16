@@ -10,6 +10,9 @@
     const iconsConatiner = document.querySelector('.wheater__icons');
     const createDiv = document.createElement('div');
 
+    const modalDiv = document.querySelector('.modal-bg');
+    const modalButton = document.querySelector('.modalBtn');
+
     const fetchCity = (key, cityName) => {
       fetch(
         `https://api.openweathermap.org/data/2.5/weather?q=${cityName}&appid=${key}&units=metric`
@@ -56,15 +59,26 @@
     };
 
     searchButton.addEventListener('click', function() {
-      const city = cityInput.value;
-      fetchCity(apiKey, city);
-      cityInput.value = '';
+      buttonClick();
     });
+    modalButton.addEventListener('click', function() {
+      modalDiv.classList.remove('modal-active');
+    });
+
+    const buttonClick = () => {
+      if (cityInput.value === '') {
+        modalDiv.classList.add('modal-active');
+      } else {
+        const city = cityInput.value;
+        fetchCity(apiKey, city);
+        cityInput.value = '';
+      }
+    };
 
     const clearDiv = () => {
       createDiv.innerHTML = '';
       iconsConatiner.classList.remove('hide');
     };
-
+  };
   appInit();
 }

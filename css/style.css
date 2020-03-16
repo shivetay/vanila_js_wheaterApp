@@ -253,4 +253,50 @@ li:hover .navigation__link {
   position: fixed;
   bottom: 25rem;
 }
+
+/* modal */
+.modal-bg {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100vh;
+  background-color: #edecde88;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: center;
+      justify-content: center;
+  -ms-flex-align: center;
+      align-items: center;
+  visibility: hidden;
+  opacity: 0;
+  transition: all 0.4s;
+}
+
+.modal-bg .modal {
+  color: #edecde;
+  background-color: #2a2f3b;
+  width: 30%;
+  height: 30%;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -ms-flex-align: center;
+      align-items: center;
+  -ms-flex-direction: column;
+      flex-direction: column;
+  border-radius: 5px;
+}
+
+.modal-bg .modal i {
+  width: 5rem;
+  height: 5rem;
+  font-size: 6rem;
+}
+
+.modal-active {
+  opacity: 1;
+  visibility: visible;
+}
 /*# sourceMappingURL=style.css.map */

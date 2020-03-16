@@ -5,6 +5,7 @@
 $color-main: #2a2f3b;
 $color-scondary: #a2a0b4;
 $color-light: #edecde;
+$color-light-opa: #edecde88;
 $color-accent: #a03b33;
 $color-accent-light: #d1944a;
 
@@ -229,4 +230,41 @@ input:focus + label {
 .weatherMulti {
   position: fixed;
   bottom: 25rem;
+}
+
+/* modal */
+.modal-bg {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100vh;
+  background-color: $color-light-opa;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  visibility: hidden;
+  opacity: 0;
+  transition: all 0.4s;
+  .modal {
+    color: $color-light;
+    background-color: $color-main;
+    width: 30%;
+    height: 30%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: column;
+    border-radius: 5px;
+    i {
+      width: 5rem;
+      height: 5rem;
+      font-size: 6rem;
+    }
+  }
+}
+
+.modal-active {
+  opacity: 1;
+  visibility: visible;
 }
