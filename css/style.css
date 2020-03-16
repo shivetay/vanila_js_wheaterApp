@@ -248,6 +248,45 @@ li:hover .navigation__link {
   color: #a03b33;
 }
 
+/* about */
+.about {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: center;
+      justify-content: center;
+  -ms-flex-align: center;
+      align-items: center;
+  margin-top: 10rem;
+}
+
+.about__content {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: center;
+      justify-content: center;
+  -ms-flex-align: center;
+      align-items: center;
+  -ms-flex-direction: column;
+      flex-direction: column;
+  width: 50%;
+  padding: 8rem;
+  background-color: #edecde;
+  color: #2a2f3b;
+}
+
+.about h1 {
+  margin-bottom: 2rem;
+  text-transform: uppercase;
+}
+
+.about p {
+  font-size: 1.6rem;
+}
+
+.about a {
+  color: #2a2f3b;
+}
+
 /* multi weather */
 .weatherMulti {
   position: fixed;

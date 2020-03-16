@@ -61,6 +61,7 @@
     searchButton.addEventListener('click', function() {
       buttonClick();
     });
+
     modalButton.addEventListener('click', function() {
       modalDiv.classList.remove('modal-active');
     });
