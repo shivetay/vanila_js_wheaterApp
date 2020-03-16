@@ -10,6 +10,7 @@ $color-accent-light: #d1944a;
 
 $font-main: 'Roboto', sans-serif;
 
+$font-small: 1.2rem;
 $font-normal: 1.6rem;
 $font-large: 2.2rem;
 $font-big: 2.8rem;
@@ -75,12 +76,6 @@ input:focus + label {
   color: $color-accent-light;
   transform: translateX(-6px) scale(1.2);
   margin-right: 1.4rem;
-}
-i {
-  width: 5rem;
-  height: 5rem;
-  font-size: 6rem;
-  padding: 1rem 2rem;
 }
 
 .container {
@@ -192,6 +187,13 @@ i {
     display: flex;
     justify-content: center;
     transition: all 0.3s;
+
+    i {
+      width: 5rem;
+      height: 5rem;
+      font-size: 6rem;
+      padding: 1rem 2rem;
+    }
   }
 }
 
@@ -202,4 +204,22 @@ i {
   background-color: $color-scondary;
   height: 5rem;
   width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  &__author {
+    padding: 1rem;
+    font-size: $font-small;
+  }
+  &__icons {
+    align-self: center;
+    i {
+      font-size: 2.2rem;
+      padding: 0 2rem;
+      transition: all 0.3s;
+    }
+    i:hover {
+      color: $color-accent;
+    }
+  }
 }

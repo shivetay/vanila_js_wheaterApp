@@ -70,13 +70,6 @@ input:focus + label {
   margin-right: 1.4rem;
 }
 
-i {
-  width: 5rem;
-  height: 5rem;
-  font-size: 6rem;
-  padding: 1rem 2rem;
-}
-
 .container {
   height: 100vh;
 }
@@ -212,6 +205,13 @@ li:hover .navigation__link {
   transition: all 0.3s;
 }
 
+.wheater__icons i {
+  width: 5rem;
+  height: 5rem;
+  font-size: 6rem;
+  padding: 1rem 2rem;
+}
+
 /* Footer */
 .footer {
   position: absolute;
@@ -219,5 +219,32 @@ li:hover .navigation__link {
   background-color: #a2a0b4;
   height: 5rem;
   width: 100%;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: justify;
+      justify-content: space-between;
+  -ms-flex-align: center;
+      align-items: center;
+}
+
+.footer__author {
+  padding: 1rem;
+  font-size: 1.2rem;
+}
+
+.footer__icons {
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+}
+
+.footer__icons i {
+  font-size: 2.2rem;
+  padding: 0 2rem;
+  transition: all 0.3s;
+}
+
+.footer__icons i:hover {
+  color: #a03b33;
 }
 /*# sourceMappingURL=style.css.map */
