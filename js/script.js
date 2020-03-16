@@ -42,7 +42,7 @@
         </div>`;
       resultDisplay.appendChild(createDiv);
       iconsConatiner.classList.add('hide');
-      setTimeout(clearDiv, 10000);
+      setTimeout(clearDiv, 12000);
     };
 
     const getIcon = iconData => {
@@ -65,20 +65,6 @@
       createDiv.innerHTML = '';
       iconsConatiner.classList.remove('hide');
     };
-
-    // const activeIcon = () => {
-    //   setTimeout(function() {
-    //     window.requestAnimationFrame(activeIcon);
-    //     for (let icon of iconsLoader) {
-    //       if (!icon.classList.contains('active-icon')) {
-    //         icon.classList.add('active-icon');
-    //       } else {
-    //         icon.classList.remove('active-icon');
-    //       }
-    //     }
-    //   }, 5000);
-    // };
-  };
 
   appInit();
 }

@@ -247,4 +247,10 @@ li:hover .navigation__link {
 .footer__icons i:hover {
   color: #a03b33;
 }
+
+/* multi weather */
+.weatherMulti {
+  position: fixed;
+  bottom: 25rem;
+}
 /*# sourceMappingURL=style.css.map */
